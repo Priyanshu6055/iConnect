@@ -38,7 +38,7 @@ router.get('/like/post/:id', isLoggedIn, async function(req, res) {
   const user = await userModel.findOne({ username: req.session.passport.user});
   const post = await postModel.findOne({_id: req.params.id});
 
-  // if already liked remove like
+  //if already liked remove like
   //if not liked, like it
 
   if(post.likes.indexOf(user._id) === -1){
