@@ -1,108 +1,76 @@
 <% include ./partials/header.ejs %>
-  <div class="w-full min-h-screen bg-zinc-900 text-white py-5">
-    <div class="w-full px-4 flex items-center justify-between">
-      <img class="w-1/4" src="/images/logo.png" alt="">
-      <div class="icons -mt-2 flex gap-5 items-center">
-        <i class="text-[1.4rem] ri-heart-3-line"></i>
-        <i class="text-[1.4rem] ri-messenger-line"></i>
+<div class="w-full min-h-screen bg-zinc-900 text-white py-5">
+  <!-- Header Section -->
+  <div class="w-full px-4">
+    <div class="max-w-[600px] mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <img class="w-1/4 md:w-1/8" src="/images/logo.png" alt="Logo">
+      
+      <!-- Icons -->
+      <div class="icons flex gap-4 items-center">
+        <i class="text-lg ri-heart-3-line"></i>
+        <i class="text-lg ri-messenger-line"></i>
       </div>
-    </div>
-    <div class="story px-3 flex gap-3 overflow-auto mt-5">
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-      <div class="circle flex-shrink-0">
-        <div
-          class="gradient w-[18vw] h-[18vw] bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
-          <div class="inner w-[92%] h-[92%] rounded-full overflow-hidden">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="posts mb-20">
-      <% posts.reverse().forEach(function(elem){ %>
-        <div class="post mt-10 w-full min-h-[50vh]">
-          <div class="title px-4 flex items-center gap-2">
-            <div class="w-[8vw] h-[8vw] bg-sky-100 rounded-full overflow-hidden ">
-              <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.user.profileImage %>" alt="">
-            </div>
-            <h4 class="text-sm"><%= elem.user.username %></h4>
-            <h6 class="text-xs opacity-30">1d</h6>
-          </div>
-          <div class="w-full h-96 mt-4 bg-sky-100 overflow-hidden ">
-            <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.picture %>" alt="">
-          </div>
-          <div class="options w-full px-4 flex justify-between items-center text-[1.4rem]">
-            <div class="flex gap-3 mt-2">
-              <a href="/like/post/<%= elem._id %>">
-                
-                <% if(elem.likes.indexOf(user._id) !== -1){ %>
-                  <i class="ri-heart-3-fill text-red-600"></i>
-                <% } else{ %>
-                  <i class="ri-heart-3-line"></i>
-                <% } %>
-
-                <!-- <i class="ri-heart-3-line"></i> -->
-              </a>
-              <i class="ri-chat-3-line"></i>
-              <i class="ri-share-circle-line"></i>
-            </div>
-            <i class="ri-bookmark-line"></i>
-          </div>
-          <h3 class="px-4 mt-2 text-sm leading-none tracking-tight"><%= elem.likes.length %></h3>
-          <h2 class="text-white font-light text-sm mt-2"><span class="font-semibold pl-4 pr-2"><%= elem.user.username %> </span><%= elem.caption%> </h2>
-        </div>
-      <% }) %>
     </div>
   </div>
-  <% include ./partials/footer.ejs %>
+
+  <!-- Stories Section -->
+  <div class="w-full px-4 mt-4">
+    <div class="story max-w-[600px] mx-auto flex gap-2 overflow-x-auto">
+      <% for (let i = 0; i < 6; i++) { %>
+        <div class="circle flex-shrink-0">
+          <div class="gradient 
+                      w-[16vw] h-[16vw] 
+                      sm:w-[14vw] sm:h-[14vw] 
+                      md:w-[10vw] md:h-[10vw] 
+                      lg:w-[8vw] lg:h-[8vw] 
+                      xl:w-[6vw] xl:h-[6vw] 
+                      rounded-full bg-gradient-to-r from-purple-700 to-orange-500 flex items-center justify-center">
+            <div class="inner w-[90%] h-[90%] rounded-full overflow-hidden">
+              <img class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Story">
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Posts Section -->
+  <div class="posts mb-16 max-w-[600px] mx-auto">
+    <% posts.reverse().forEach(function(elem){ %>
+      <div class="post mt-8 w-full min-h-[40vh]">
+        <div class="title px-3 flex items-center gap-2">
+          <div class="w-[6vw] h-[6vw] sm:w-[5vw] sm:h-[5vw] md:w-[4vw] md:h-[4vw] rounded-full overflow-hidden">
+            <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.user.profileImage %>" alt="Profile Image">
+          </div>
+          <h4 class="text-s"><%= elem.user.username %></h4>
+          <h6 class="text-[0.6rem] opacity-50">1d</h6>
+        </div>
+        <div class="w-full h-64 mt-3 bg-sky-100 overflow-hidden">
+          <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.picture %>" alt="Post Image">
+        </div>
+        <div class="options w-full px-3 flex justify-between items-center text-lg">
+          <div class="flex gap-2 mt-1">
+            <a href="/like/post/<%= elem._id %>">
+              <% if(elem.likes.indexOf(user._id) !== -1){ %>
+                <i class="ri-heart-3-fill text-red-600"></i>
+              <% } else { %>
+                <i class="ri-heart-3-line"></i>
+              <% } %>
+            </a>
+            <i class="ri-chat-3-line"></i>
+            <i class="ri-share-circle-line"></i>
+          </div>
+          <i class="ri-bookmark-line"></i>
+        </div>
+        <h3 class="px-3 mt-.5 text-xs"><%= elem.likes.length %> likes</h3>
+        <h2 class="text-white font-light text-xs ml-3 mt-1">
+          <span class="font-semibold"><%= elem.user.username %></span> <%= elem.caption %>
+        </h2>
+      </div>
+    <% }) %>
+  </div>
+</div>
+<% include ./partials/footer.ejs %>

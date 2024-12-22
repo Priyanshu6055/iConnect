@@ -1,10 +1,12 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const dotenv = require('dotenv').config()
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const expressSession = require('express-session');
 const mongoose = require('mongoose');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,8 +14,10 @@ const passport = require('passport');
 
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public')); // new added
 app.set('view engine', 'ejs');
 
 app.use(expressSession({
@@ -21,6 +25,8 @@ app.use(expressSession({
   saveUninitialized: false,
   secret: "hey hey hey"
 }))
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(usersRouter.serializeUser());
