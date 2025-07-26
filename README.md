@@ -1,4 +1,4 @@
-## 🛠️ Project Setup: iConnect (Node.js + Express + EJS + MongoDB)
+## 🛠️ Project Setup: iConnect (Node.js + Express + EJS + TailwindJs + MongoDB)
 
 ---
 
@@ -49,7 +49,7 @@ npm install
 Create a `.env` file in the root directory and add your environment variables:
 
 ```env
-PORT=5000
+PORT=3000
 DB_URI=your_mongodb_connection_string
 SESSION_SECRET=your_session_secret
 ```
@@ -62,6 +62,6 @@ SESSION_SECRET=your_session_secret
 npm start
 ```
 
-The app will run on `http://localhost:5000` by default.
+The app will run on `http://localhost:3000` by default.
 
 
