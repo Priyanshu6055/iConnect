@@ -1,4 +1,4 @@
-## 🛠️ Project Setup: iConnect (Node.js + Express + EJS + TailwindJs + MongoDB)
+## 🛠️ Project Setup: iConnect (Node.js + Express + EJS + Tailwind.js + MongoDB)
 
 ---
 
